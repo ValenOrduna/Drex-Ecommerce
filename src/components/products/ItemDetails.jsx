@@ -1,15 +1,17 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { productos } from "../../mocks/products"
 import { Link } from "react-router-dom"
 import ItemDetailStockContainer from "../itemDetailsStock/ItemDetailStockContainer"
+import { contexto } from "../context/GenericContext"
 
-const ItemDetails = ({currency}) => {
+const ItemDetails = () => {
   const [producto,setProducto]=useState({})
   const [estadoPromesa,setEstadoPromesa]=useState(false)
   const [volverAnterior,setVolverAnterior]=useState('')
   const {idmarca,idzapatilla}=useParams()
-
+  const {currency}=useContext(contexto)
+  
   useEffect(()=>{
   
     const promesaProducto= new Promise ((res,rej)=>{
@@ -53,7 +55,7 @@ const ItemDetails = ({currency}) => {
             <div>
               <h2 className="font-bold text-2xl uppercase my-5">{producto[0].nombre}</h2>
               <h3 className="font-bold text-2xl uppercase text-red-600 my-5">{currency(producto[0].precio)}</h3>
-              <ItemDetailStockContainer talles={producto[0].talles} />
+              <ItemDetailStockContainer talles={producto[0].talles} producto={producto[0]} />
             </div>
 
           </div>

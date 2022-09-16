@@ -1,9 +1,12 @@
 
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import CartWidget from './CartWidget'
-const Header = ({setEfectuarAnimacion}) => {
+import { contexto } from '../context/GenericContext'
+
+const Header = () => {
   const [anteriorPagina,setAnteriorPagina]=useState('')
+  const {setEfectuarAnimacion}=useContext(contexto)
 
   const realizarAnimacion=(e,titulo)=>{
     if(e.id!==anteriorPagina){
@@ -15,7 +18,9 @@ const Header = ({setEfectuarAnimacion}) => {
   return (
     <div className='bg-black flex justify-between'>
         <div className='w-28'>
-            <img className='w-full' src="https://i.imgur.com/StLUTzK.png" alt="" />
+            <Link to='/'>
+              <img className='w-full' src="https://i.imgur.com/StLUTzK.png" alt="" />
+            </Link>
         </div>
         <div className='flex justify-center items-center text-center font-bold text-2xl text-white tracking-widest mr-10'>
             <Link onClick={(e)=>realizarAnimacion(e.target,'Home')} id='home' to='/' className='mx-5 hover:border-b-4 hover:border-r-4'>INICIO</Link>

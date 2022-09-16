@@ -1,29 +1,29 @@
-import { useEffect, useState } from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Cart from './components/cart/Cart';
+import GenericContext from './components/context/GenericContext';
 import Header from './components/header/Header';
 import ItemDetails from './components/products/ItemDetails';
 import ProductsContainer from './components/products/ProductsContainer';
 
 function App() {
-  const [efectuarAnimacion,setEfectuarAnimacion]=useState('text-center')
-
-  const currency = (number)=>{
-    return new Intl.NumberFormat('en-US', {style: 'currency',currency: 'USD', minimumFractionDigits: 2}).format(number);
-  };
+  
 
   return (
     <>
-      <BrowserRouter>
-
-        <Header setEfectuarAnimacion={setEfectuarAnimacion} />
-
-        <Routes>
-          <Route path='/' element={<ProductsContainer efectuarAnimacion={efectuarAnimacion} setEfectuarAnimacion={setEfectuarAnimacion} currency={currency}  />} ></Route>
-          <Route path='/zapatillas/:idmarca' element={<ProductsContainer efectuarAnimacion={efectuarAnimacion} setEfectuarAnimacion={setEfectuarAnimacion} currency={currency}  />} ></Route>
-          <Route path='/zapatilla/:idmarca/:idzapatilla' element={<ItemDetails currency={currency}  />} ></Route>
-        </Routes>
-
-      </BrowserRouter>
+      <GenericContext>
+        <BrowserRouter>
+        
+          <Header />
+        
+          <Routes>
+            <Route path='/' element={<ProductsContainer />} ></Route>
+            <Route path='/zapatillas/:idmarca' element={<ProductsContainer />} ></Route>
+            <Route path='/zapatilla/:idmarca/:idzapatilla' element={<ItemDetails />} ></Route>
+            <Route path='/cart' element={<Cart/>} ></Route>
+          </Routes>
+        
+        </BrowserRouter>
+      </GenericContext>
       
     </>
   );

@@ -1,7 +1,10 @@
+import { useContext } from "react"
 import { Link } from "react-router-dom"
+import { contexto } from "../context/GenericContext"
 
-const ShowProducts = ({totalProductos,tituloPagina,efectuarAnimacion,currency}) => {
-
+const ShowProducts = ({totalProductos,tituloPagina}) => {
+  const {efectuarAnimacion,currency}=useContext(contexto)
+  
   return (
     <>
 

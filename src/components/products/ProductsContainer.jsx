@@ -1,13 +1,15 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { productos } from "../../mocks/products"
 import ShowProducts from "./ShowProducts"
 import { useParams } from "react-router-dom"
+import { contexto } from "../context/GenericContext"
 
-const ProductsContainer = ({efectuarAnimacion,setEfectuarAnimacion,currency}) => {
+const ProductsContainer = () => {
     const [totalProductos,setTotalProductos]=useState([])
     const [estadoPromesa,setEstadoPromesa]=useState(false)
     const [tituloPagina,setTituloPagina]=useState('')
     const {idmarca}=useParams()
+    const {setEfectuarAnimacion}=useContext(contexto)
 
     const generadorDeID=()=>{
         
@@ -28,10 +30,15 @@ const ProductsContainer = ({efectuarAnimacion,setEfectuarAnimacion,currency}) =>
         }, 200);
 
         const promesaProducto= new Promise((res,rej)=>{
+            const productosCompleto= productos.map((producto)=>{
+                if(!producto.id){
+                    producto.id=generadorDeID()
+                }
+                return producto
+            })
             if(idmarca!==undefined){
                 if(idmarca==='otras-zapatillas'){
-                    const filtradoDeProductos=productos.filter((producto)=>{
-                        producto.id=generadorDeID()
+                    const filtradoDeProductos=productosCompleto.filter((producto)=>{
                         if(producto.marca!=='nike'&&producto.marca!=='adidas'){
                             return producto
                         }
@@ -39,8 +46,7 @@ const ProductsContainer = ({efectuarAnimacion,setEfectuarAnimacion,currency}) =>
                     res(filtradoDeProductos) 
                     setTituloPagina('Otras de nuestras zapatillas') 
                 }else{
-                    const filtradoDeProductos=productos.filter((producto)=>{
-                        producto.id=generadorDeID()
+                    const filtradoDeProductos=productosCompleto.filter((producto)=>{
                         if(producto.marca===idmarca){
                             return producto
                         }
@@ -49,8 +55,7 @@ const ProductsContainer = ({efectuarAnimacion,setEfectuarAnimacion,currency}) =>
                     setTituloPagina('Nuestras zapatillas '+idmarca) 
                 }  
             }else{
-                const filtradoDeProductos=productos.filter((producto)=>{
-                    producto.id=generadorDeID()
+                const filtradoDeProductos=productosCompleto.filter((producto)=>{
                     if(producto.valoracion>=7){
                         return producto
                     }
@@ -70,7 +75,7 @@ const ProductsContainer = ({efectuarAnimacion,setEfectuarAnimacion,currency}) =>
 
   return (
     <div>
-        { estadoPromesa===true && <ShowProducts totalProductos={totalProductos} tituloPagina={tituloPagina} efectuarAnimacion={efectuarAnimacion} currency={currency} /> }
+        { estadoPromesa===true && <ShowProducts totalProductos={totalProductos} tituloPagina={tituloPagina} /> }
     </div>
   )
 }
