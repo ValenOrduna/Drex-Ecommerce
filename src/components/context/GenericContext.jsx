@@ -38,7 +38,7 @@ const GenericContext = ({children}) => {
     }
 
   return (
-    <contexto.Provider value={{efectuarAnimacion,setEfectuarAnimacion,currency,agregarAlCarrito,carrito}}>{children}</contexto.Provider>
+    <contexto.Provider value={{efectuarAnimacion,setEfectuarAnimacion,currency,agregarAlCarrito,carrito,setCarrito}}>{children}</contexto.Provider>
   )
 }
 
