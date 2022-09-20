@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useEffect } from "react"
 import { useContext } from "react"
 import { contexto } from "../context/GenericContext"
+import { Link } from "react-router-dom"
 
 const CartWidget = () => {
   const [totalCarrito,setTotalCarrito]=useState(0)
@@ -15,10 +16,14 @@ const CartWidget = () => {
   },[carrito])
   return (
     <div>
-        <div className="w-10 flex justify-center items-center text-center ml-5 mr-3">
-            <img className="mx-3" src="https://i.imgur.com/9OhHKlK.png" alt=""/>
-            <p className="p-2 bg-white rounded-3xl text-xl text-red-600 font-bold">{totalCarrito}</p>
-        </div>
+        {totalCarrito>0 &&
+        <Link to='/cart'>
+          <div className="w-10 flex justify-center items-center text-center ml-5 mr-3">
+              <img className="mx-3" src="https://i.imgur.com/9OhHKlK.png" alt=""/>
+              <p className="p-2 bg-white rounded-3xl text-xl text-red-600 font-bold">{totalCarrito}</p>
+          </div>
+        </Link>
+        }
     </div>
   )
 }

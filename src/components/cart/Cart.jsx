@@ -35,7 +35,7 @@ const Cart = () => {
   }
 
   return (
-    <div>
+    <div className='animate__animated animate__backInUp animate__faster'>
 
       {carrito.length>0 ? 
       <div>
@@ -82,7 +82,7 @@ const Cart = () => {
       
       :
       <div>
-        <h2 className='font bold text-3xl uppercase italic text-center mt-80'>Lo siento, no hay productos agregados al carrito</h2>
+        <h2 className='font bold text-3xl uppercase italic text-center mt-80 font-bold'>Lo siento, no hay productos agregados al carrito</h2>
         <div className="mt-40 flex justify-center">
         <Link to='/'>
             <button className="p-3 font-bold text-xl bg-black text-white mx-5 rounded-2xl">
