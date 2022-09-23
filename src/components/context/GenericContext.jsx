@@ -3,6 +3,7 @@ import { createContext, useState } from "react"
 export const contexto=createContext()
 
 const GenericContext = ({children}) => {
+    const [productos,setProductos] = useState ([])
     const [carrito,setCarrito]=useState([])
     const [efectuarAnimacion,setEfectuarAnimacion]=useState('text-center')
 
@@ -38,7 +39,7 @@ const GenericContext = ({children}) => {
     }
 
   return (
-    <contexto.Provider value={{efectuarAnimacion,setEfectuarAnimacion,currency,agregarAlCarrito,carrito,setCarrito}}>{children}</contexto.Provider>
+    <contexto.Provider value={{productos,setProductos,efectuarAnimacion,setEfectuarAnimacion,currency,agregarAlCarrito,carrito,setCarrito}}>{children}</contexto.Provider>
   )
 }
 

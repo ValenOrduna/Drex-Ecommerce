@@ -2,8 +2,9 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Cart from './components/cart/Cart';
 import GenericContext from './components/context/GenericContext';
 import Header from './components/header/Header';
+import CleaningProducts from './components/products/CleaningProducts';
 import ItemDetails from './components/products/ItemDetails';
-import ProductsContainer from './components/products/ProductsContainer';
+
 
 function App() {
   
@@ -16,8 +17,8 @@ function App() {
           <Header />
         
           <Routes>
-            <Route path='/' element={<ProductsContainer />} ></Route>
-            <Route path='/zapatillas/:idmarca' element={<ProductsContainer />} ></Route>
+            <Route path='/' element={<CleaningProducts/>} ></Route>
+            <Route path='/zapatillas/:idmarca' element={<CleaningProducts />} ></Route>
             <Route path='/zapatilla/:idmarca/:idzapatilla' element={<ItemDetails />} ></Route>
             <Route path='/cart' element={<Cart/>} ></Route>
           </Routes>

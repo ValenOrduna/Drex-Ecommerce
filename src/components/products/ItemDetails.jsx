@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { productos } from "../../mocks/products"
 import { Link } from "react-router-dom"
 import ItemDetailStockContainer from "../itemDetailsStock/ItemDetailStockContainer"
 import { contexto } from "../context/GenericContext"
@@ -10,7 +9,7 @@ const ItemDetails = () => {
   const [estadoPromesa,setEstadoPromesa]=useState(false)
   const [volverAnterior,setVolverAnterior]=useState('')
   const {idmarca,idzapatilla}=useParams()
-  const {currency}=useContext(contexto)
+  const {productos,currency}=useContext(contexto)
   
   useEffect(()=>{
   
