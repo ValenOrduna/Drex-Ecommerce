@@ -41,10 +41,12 @@ const GenericContext = ({children}) => {
     }
 
     const realizarCompra = () => {
+      const moment = require('moment');
+      const now = moment().format("DD/MM/YYYY HH:mm:ss A");
       const promesaCompra = new Promise ((res)=>{
         let order=[]
         carrito.map ((producto) => {
-          const orderProducto = {nombre:producto.nombre,precio:Number(producto.precio),cantidad:producto.cantidad}
+          const orderProducto = {nombre:producto.nombre,precio:Number(producto.precio),cantidad:producto.cantidad,fecha:now,estado:false}
           order=[...order,orderProducto]
         })
         res(order)
