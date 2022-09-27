@@ -6,7 +6,7 @@ import ButtonCart from './ButtonCart'
 import { Link } from 'react-router-dom'
 
 const Cart = () => {
-  const {carrito,setCarrito,currency}=useContext(contexto)
+  const {carrito,setCarrito,currency,realizarCompra}=useContext(contexto)
 
   const mostrarAlerta = (producto) => {
     Swal.fire({
@@ -76,7 +76,7 @@ const Cart = () => {
         )
         })}
         <CartTotal carrito={carrito} currency={currency} />
-        <ButtonCart/>
+        <ButtonCart realizarCompra={realizarCompra} />
 
       </div>
       

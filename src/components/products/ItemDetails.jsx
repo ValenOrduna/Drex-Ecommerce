@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"
 import { Link } from "react-router-dom"
 import ItemDetailStockContainer from "../itemDetailsStock/ItemDetailStockContainer"
 import { contexto } from "../context/GenericContext"
+import Valoration from "./Valoration"
 
 const ItemDetails = () => {
   const [producto,setProducto]=useState({})
@@ -55,6 +56,7 @@ const ItemDetails = () => {
               <h2 className="font-bold text-2xl uppercase my-5">{producto[0].nombre}</h2>
               <h3 className="font-bold text-2xl uppercase text-red-600 my-5">{currency(producto[0].precio)}</h3>
               <ItemDetailStockContainer talles={producto[0].talles} producto={producto[0]} />
+              <Valoration producto={producto[0].id}/>
             </div>
 
           </div>

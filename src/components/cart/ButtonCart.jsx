@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-const ButtonCart = () => {
+const ButtonCart = ({realizarCompra}) => {
   return (
     <div className="mt-40 flex justify-center">
         <Link to='/'>
@@ -9,8 +9,8 @@ const ButtonCart = () => {
             </button>
         </Link>
 
-        <Link to='/checkout'>
-            <button className="p-3 font-bold text-xl bg-red-700 text-white mx-5 rounded-2xl">
+        <Link to='/checkout' onClick={()=>realizarCompra()}>
+            <button className="p-3 font-bold text-xl bg-violet-700 text-white mx-5 rounded-2xl">
                 FINALIZAR COMPRA
             </button>
         </Link>
