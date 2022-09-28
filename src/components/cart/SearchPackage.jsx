@@ -34,9 +34,10 @@ const SearchPackage = ({totalOrdenes}) => {
     }
 
     return (
-    <div>
+    <div className='text-center mt-6'>
+        <h2 className='text-2xl font-extrabold uppercase'>Verifica el Estado de tu Paquete</h2>
         <form onSubmit={handleSubmit} className='flex justify-center items-center my-7'>
-            <input onChange={handleInputChange} value={idPaquete} placeholder='Busca tu paquete aqui...' className={search.styleInput} type="text" />
+            <input onChange={handleInputChange} value={idPaquete} placeholder='Ingrese el ID del paquete...' className={search.styleInput} type="text" />
             <button className={search.styleBtn}>Buscar</button>
         </form>
     </div>
