@@ -22,6 +22,7 @@ El proyecto Drex cuenta con las siguientes funciones:
 - **☑** Secciones de determinadas marcas de zapatillas.
 - **☑** Control de stock a travez de talles, que permite observar que talles estan disponibles y en que numero , cuanto stock posee en total y en cada talle y tambien observar cuales no estan disponibles.
 - **☑** Seccion carrito con un contador, en la que podes visualizar cuantos elementos tenes en el carrito,ver los productos con el total correspondiente y el total del carrito. Tambien permite finalizar dicha compra.
+- **☑** Gracias al LocalStorage la informacion del carrito nunca se pierde si actualizas por lo tanto podes agregar productos y esos mismos no se van a perder al actualizar la pagina.
 - **☑** Formulario de datos para finalizar compra con su correspondiente validacion de cada uno.
 - **☑** Una vez finalizado la compra de un/unos producto/s se generara la orden en FireBase  te brindara los datos de la compra y el ID de la orden.
 - **☑** Podras ver las ordenes realizadas en la seccion Ver Compras y visualizar su estado y a que hora fue comprada dicha orden.
