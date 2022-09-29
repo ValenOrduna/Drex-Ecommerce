@@ -37,7 +37,7 @@ El proyecto Drex cuenta con las siguientes funciones:
 - Repositorio : 
 1. Debes clonar el repositorio utilizando el siguiente comando en la terminal `$ git clone https://github.com/ValenOrduna/Drex-Ecommerce.git`
 1. Al finalizar el clonado, ingresaremos a la terminal el siguiente comando `$ npm install`
-1. Como ultimo paso, ingresar en la terminar `$ npm start`
+1. Como ultimo paso, ingresar en la terminal `$ npm start`
 
 ## :adult: Creador:
 Soy **Valentin Orduña** y me puedes encontrar en las siguientes redes:
