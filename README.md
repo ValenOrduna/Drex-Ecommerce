@@ -10,7 +10,7 @@ El proyecto posee 4 librerias:
 - **Sweet Alert :** Posee alertas para facilitar la respuesta y el entendimiento de algunas tareas.
 - **Animated.css :** Ofrece animaciones al proyecto que le dan una continiudad a las secciones y una experiencia agradable al visitante.
 - **Moment.js :** Presenta datos (Horario) de las compras de productos al usuario y a la base de datos.
-- **React-Hook-Form :** Permite optimizar y facilitar las validaciones para el formulario de datoS.
+- **React-Hook-Form :** Permite optimizar y facilitar las validaciones para el formulario de datos.
 
 ## :hammer_and_wrench: Funcionabilidad:
 El proyecto Drex cuenta con las siguientes funciones:
