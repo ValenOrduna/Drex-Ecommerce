@@ -18,7 +18,7 @@ El proyecto Drex cuenta con las siguientes funciones:
 - **☑**  Controla el estado de los elementos a partir de un Hook llamado useState.
 - **☑** Rutas dinamicas gracias a React Router Dom, que permite navegar de una manera sencilla, efectiva y entendible sobre los componentes.
 - **☑** Seccion en la que podes ver las zapatillas mas valoradas por las personas.
-- **☑** Funcion para valorar la zapatilla y esto permite que la seccion de zapatillas mas valoradas sea mas dinamica.
+- **☑** Funcion para valorar las zapatillas, esto permite que la seccion de zapatillas mas valoradas sea mas dinamica.
 - **☑** Secciones de determinadas marcas de zapatillas.
 - **☑** Control de stock a travez de talles, que permite observar que talles estan disponibles y en que numero , cuanto stock posee en total y en cada talle y tambien observar cuales no estan disponibles.
 - **☑** Seccion carrito con un contador, en la que podes visualizar cuantos elementos tenes en el carrito,ver los productos con el total correspondiente y el total del carrito. Tambien permite finalizar dicha compra.
