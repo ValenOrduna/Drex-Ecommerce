@@ -26,3 +26,5 @@ El proyecto Drex cuenta con las siguientes funciones:
 - **☑** Una vez finalizado la compra de un/unos producto/s se generara la orden en FireBase  te brindara los datos de la compra y el ID de la orden.
 - **☑** Podras ver las ordenes realizadas en la seccion Ver Compras y visualizar su estado y a que hora fue comprada dicha orden.
 - **☑** Funcion de obtener el estado de tu paquete ingresando en el campo ubicado en la seccion Ver Compras el ID de la orden que quieras indagar, este mismo te retornara si el estado del paquete esta en proceso o ya fue despachado.
+
+https://user-images.githubusercontent.com/106166859/193110713-c477fd92-72c4-49fe-8d1a-42bf018bb045.mp4
