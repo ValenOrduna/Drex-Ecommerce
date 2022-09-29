@@ -30,7 +30,7 @@ El proyecto Drex cuenta con las siguientes funciones:
 ## :movie_camera: Video de la Pagina:
 [https://user-images.githubusercontent.com/106166859/193110713-c477fd92-72c4-49fe-8d1a-42bf018bb045.mp4](https://user-images.githubusercontent.com/106166859/193111262-1216fba5-fa02-4972-b733-92d73a61abf6.mp4)
 
-## :mag-right: Ver Pagina:
+## :mag_right: Ver Pagina:
 
 - Link Principal : [Drex Ecommerce](https://drex-ecommerce.vercel.app/ "Drex Ecommerce")
 
