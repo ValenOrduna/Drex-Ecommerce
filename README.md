@@ -1,4 +1,4 @@
-# PROYECTO ECOMMERCE REALIZADO CON REACT Y FIREBASE.
+# :rocket: PROYECTO ECOMMERCE REALIZADO CON REACT Y FIREBASE.
 ## :speech_balloon: Sobre el proyecto:
 Drex es una pagina ecommerce, en la cual puedes observar y comprar las zapatillas mas requeridas del mercado a un precio excelente.
 
@@ -12,7 +12,7 @@ El proyecto posee 4 librerias:
 - **Moment.js :** Presenta datos (Horario) de las compras de productos al usuario y a la base de datos.
 - **React-Hook-Form :** Permite optimizar y facilitar las validaciones para el formulario de dato
 
-## :dizzy: Funcionabilidad:
+## :hammer_and_wrench: Funcionabilidad:
 El proyecto Drex cuenta con las siguientes funciones:
 
 - **☑**  Controla el estado de los elementos a partir de un Hook llamado useState.
