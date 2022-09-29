@@ -7,7 +7,6 @@ const GenericContext = ({children}) => {
     const [carrito,setCarrito]=useState([])
     const [efectuarAnimacion,setEfectuarAnimacion]=useState('text-center')
     const [idCompra,setIdCompra] = useState ('')
-    const [estadoCompra,setEstadoCompra] = useState (false)
 
     const currency = (number)=>{
       return new Intl.NumberFormat('en-US', {style: 'currency',currency: 'USD', minimumFractionDigits: 2}).format(number);
@@ -41,6 +40,7 @@ const GenericContext = ({children}) => {
     }
 
     const realizarCompra = () => {
+      console.log('llegue')
       const moment = require('moment');
       const now = moment().format("DD/MM/YYYY HH:mm:ss A");
       const promesaCompra = new Promise ((res)=>{
@@ -57,11 +57,10 @@ const GenericContext = ({children}) => {
         addDoc(collectionRef,Object.assign({}, res)).then(({id})=>{setIdCompra(id)})
         setCarrito([])
       })
-      .finally(()=>setEstadoCompra(true))
     }
 
   return (
-    <contexto.Provider value={{productos,setProductos,efectuarAnimacion,setEfectuarAnimacion,currency,agregarAlCarrito,carrito,setCarrito,realizarCompra,idCompra,estadoCompra}}>{children}</contexto.Provider>
+    <contexto.Provider value={{productos,setProductos,efectuarAnimacion,setEfectuarAnimacion,currency,agregarAlCarrito,carrito,setCarrito,realizarCompra,idCompra}}>{children}</contexto.Provider>
   )
 }
 

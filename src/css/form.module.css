@@ -1,0 +1,61 @@
+
+.input {
+    width: 20%;
+    border: 2px solid #e8e8e8;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #212121;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+    margin: 1% 0;
+}
+
+.input:focus {
+    outline-color: white;
+    background-color: #212121;
+    color: #e8e8e8;
+    box-shadow: 5px 5px #888888;
+}
+
+
+.boton {
+    width: 140px;
+    height: 45px;
+    font-size: 23px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: black;
+    font-weight: 700;
+    position: relative;
+    transition: all 0.5s;
+    z-index: 1;
+    margin: 40px 0;
+}
+
+.boton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: black;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.boton:hover::before {
+    width: 100%;
+}
+
+.boton:hover {
+    color: white;
+}
+
+.boton:active:before {
+    background: #b9b9b9;
+}

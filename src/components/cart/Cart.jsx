@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { contexto } from '../context/GenericContext'
 import CartTotal from './CartTotal'
 import Swal from 'sweetalert2'
@@ -36,8 +36,8 @@ const Cart = () => {
 
   return (
     <div className='animate__animated animate__backInUp animate__faster'>
+      {carrito.length>0 ?
 
-      {carrito.length>0 ? 
       <div>
         <div className='w-5/6 mt-3 bg-black mx-auto flex justify-between items-center'>
           <div className='w-1/4'>
@@ -52,7 +52,7 @@ const Cart = () => {
           <div className='w-1/4'>
             <h3 className='text-2xl font-bold text-white text-center uppercase'>Total</h3>
           </div>
-        </div>
+      </div>
 
         {carrito.map((producto)=>{
         return(
@@ -92,7 +92,6 @@ const Cart = () => {
         </div>
       </div>
       }
-
     </div>
   )
 }
