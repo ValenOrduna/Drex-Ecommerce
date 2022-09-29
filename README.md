@@ -40,7 +40,7 @@ El proyecto Drex cuenta con las siguientes funciones:
 1. Como ultimo paso, ingresar en la terminal `$ npm start`
 
 ## :adult: Creador:
-Soy **Valentin Orduña** y me puedes encontrar en las siguientes redes:
+Soy **Valentin Orduña** y me puedes encontrar en los siguientes lugares:
 - **[LINKEDIN](https://www.linkedin.com/in/valentinorduna/ "LINKEDIN")**
 
 - **[GITHUB](https://github.com/ValenOrduna "GITHUB")**
