@@ -27,4 +27,4 @@ El proyecto Drex cuenta con las siguientes funciones:
 - **☑** Podras ver las ordenes realizadas en la seccion Ver Compras y visualizar su estado y a que hora fue comprada dicha orden.
 - **☑** Funcion de obtener el estado de tu paquete ingresando en el campo ubicado en la seccion Ver Compras el ID de la orden que quieras indagar, este mismo te retornara si el estado del paquete esta en proceso o ya fue despachado.
 
-https://user-images.githubusercontent.com/106166859/193110713-c477fd92-72c4-49fe-8d1a-42bf018bb045.mp4
+[https://user-images.githubusercontent.com/106166859/193110713-c477fd92-72c4-49fe-8d1a-42bf018bb045.mp4](https://user-images.githubusercontent.com/106166859/193111262-1216fba5-fa02-4972-b733-92d73a61abf6.mp4)
