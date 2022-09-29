@@ -9,7 +9,6 @@ import PurchaseData from './components/purchase/PurchaseData';
 
 
 function App() {
-  
 
   return (
     <>

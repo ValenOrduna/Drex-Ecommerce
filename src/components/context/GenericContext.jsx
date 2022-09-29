@@ -1,5 +1,6 @@
 import { createContext, useState } from "react"
 import {addDoc, collection, getFirestore} from 'firebase/firestore'
+import { useEffect } from "react"
 export const contexto=createContext()
 
 const GenericContext = ({children}) => {
@@ -11,7 +12,9 @@ const GenericContext = ({children}) => {
     const currency = (number)=>{
       return new Intl.NumberFormat('en-US', {style: 'currency',currency: 'USD', minimumFractionDigits: 2}).format(number);
     };
-
+    useEffect(()=>{
+      JSON.parse(localStorage.getItem('carrito')) && setCarrito(JSON.parse(localStorage.getItem('carrito')))
+    },[])
     const agregarAlCarrito = (producto,cantidad) =>{
       
       let agregarProducto=true,actualizarCarrito=[]
@@ -33,8 +36,10 @@ const GenericContext = ({children}) => {
             producto.cantidad=cantidad
             const nuevoCarrito=[...actualizarCarrito,producto]
             setCarrito(nuevoCarrito)
+            actualizarLocalStorage(nuevoCarrito)
           }else{
             setCarrito(actualizarCarrito)
+            actualizarLocalStorage(actualizarCarrito)
           }
         })
     }
@@ -59,8 +64,12 @@ const GenericContext = ({children}) => {
       })
     }
 
+    const actualizarLocalStorage = (actualizar) =>{
+      localStorage.setItem('carrito',JSON.stringify(actualizar))
+    }
+
   return (
-    <contexto.Provider value={{productos,setProductos,efectuarAnimacion,setEfectuarAnimacion,currency,agregarAlCarrito,carrito,setCarrito,realizarCompra,idCompra}}>{children}</contexto.Provider>
+    <contexto.Provider value={{productos,setProductos,efectuarAnimacion,setEfectuarAnimacion,currency,agregarAlCarrito,carrito,setCarrito,realizarCompra,idCompra,actualizarLocalStorage}}>{children}</contexto.Provider>
   )
 }
 

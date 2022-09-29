@@ -6,7 +6,7 @@ import ButtonCart from './ButtonCart'
 import { Link } from 'react-router-dom'
 
 const Cart = () => {
-  const {carrito,setCarrito,currency,realizarCompra}=useContext(contexto)
+  const {carrito,setCarrito,currency,realizarCompra,actualizarLocalStorage}=useContext(contexto)
 
   const mostrarAlerta = (producto) => {
     Swal.fire({
@@ -32,6 +32,7 @@ const Cart = () => {
   const borrarElemento = (producto) => {
     const nuevoCarrito= carrito.filter(productos => productos.id != producto.id)
     setCarrito(nuevoCarrito)
+    actualizarLocalStorage(nuevoCarrito)
   }
 
   return (
