@@ -45,7 +45,6 @@ const GenericContext = ({children}) => {
     }
 
     const realizarCompra = () => {
-      console.log('llegue')
       const moment = require('moment');
       const now = moment().format("DD/MM/YYYY HH:mm:ss A");
       const promesaCompra = new Promise ((res)=>{
